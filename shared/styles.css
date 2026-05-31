@@ -911,6 +911,15 @@ a { color: inherit; text-decoration: none; }
   .k-word { opacity: 1; transform: none; transition: none; }
 }
 
+/* Tablet + mobile — keep dark bands off the screen edge */
+@media (max-width: 899px) {
+  .research-band { padding-left: 6% !important; padding-right: 6% !important; }
+  .research-band__inner { max-width: 100% !important; }
+  .quote-band { padding-left: 6% !important; padding-right: 6% !important; }
+  .quote-band__inner { max-width: 100% !important; }
+  .footer { padding-left: 6% !important; padding-right: 6% !important; }
+}
+
 /* =======================================================================
    Mobile — widen the 80% content wrappers to ~95% on small screens
    ======================================================================= */
