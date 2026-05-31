@@ -541,14 +541,14 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   padding-block: clamp(48px, 7vw, 96px);
   padding-inline: var(--s-5);
-  max-width: 80%;
+  max-width: 90%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .section--dark .pullquote-block,
-.section--moss .pullquote-block { max-width: 80%; }
+.section--moss .pullquote-block { max-width: 90%; }
 
 .pullquote {
   position: relative;
@@ -559,7 +559,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.018em;
   font-weight: 300;
   text-wrap: balance;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   padding-top: 1.1em;
   text-align: center;
@@ -581,7 +581,7 @@ a { color: inherit; text-decoration: none; }
 }
 .section--dark .pullquote::before,
 .section--moss .pullquote::before { color: var(--stone-soft); opacity: 0.55; }
-.pullquote--wide { max-width: 80%; }
+.pullquote--wide { max-width: 90%; }
 
 .attribution {
   font-family: var(--font-sans);
@@ -601,6 +601,9 @@ a { color: inherit; text-decoration: none; }
 /* =======================================================================
    Nav + Footer
    ======================================================================= */
+/* Anchor scroll offset — keep section tops clear of the sticky nav */
+[data-chapter] { scroll-margin-top: 80px; }
+
 .nav {
   position: sticky;
   top: 0;
