@@ -673,7 +673,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (min-width: 980px) {
   .nav__links { display: flex; }
-  .nav__toggle { display: none; }
+  .nav__toggle { display: none !important; }
 }
 
 .nav__cta { display: flex; gap: 10px; align-items: center; }
