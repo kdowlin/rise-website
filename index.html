@@ -1,1 +1,1985 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RISE — Reimagining Incarceration through Systemic Empowerment</title>
+<meta name="description" content="A trauma-informed model for diversion, behavioral transformation, and long-term recidivism reduction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="shared/styles.css">
+<script src="shared/image-slot.js"></script>
+</head>
+<body data-screen-label="01 Home">
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#15171C"/><text x="50" y="58" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#EEEAE0">R</text></svg>
+</template>
 
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav nav--on-image" id="site-nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html" aria-label="Rise For Change — home">
+      <span class="logo-wordmark">Rise For Change</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#model">The Model</a></li>
+      <li><a href="#outcomes">Outcomes</a></li>
+      <li><a href="#for-das">For DAs &amp; Cities</a></li>
+      <li><a href="#for-funders">For Funders</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+    </ul>
+    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle><span class="nav__toggle-bars" aria-hidden="true"><span></span></span>Menu</button>
+      </div>
+    <div class="nav__sheet"><a href="#approach">Approach</a>
+      <a href="#model">The Model</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#for-das">For DAs &amp; Cities</a>
+      <a href="#for-funders">For Funders</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#press">Press &amp; Media</a></div>
+  </nav>
+
+<!-- ============================ COVER ============================ -->
+<header class="cover" data-screen-label="00 Cover">
+
+  <!-- Full-bleed photograph as backdrop -->
+  <img src="images/hero.png" alt="Two people in their neighborhood, in conversation in afternoon light." class="cover__bg">
+  <div class="cover__scrim" aria-hidden="true"></div>
+
+  <!-- Overlay composition -->
+  <div class="cover__overlay">
+    <div class="cover__overlay-inner">
+
+      <!-- Opening line -->
+      <span class="cover__open" data-kinetic data-kinetic-step="48" data-kinetic-delay="800">A diversion model</span>
+
+      <!-- Bold display headline -->
+      <h1 class="cover__h" data-kinetic data-kinetic-step="80" data-kinetic-delay="1100">
+        built to reduce
+        <em class="cover__h-em">recidivism</em>
+        at its <em class="cover__h-em">root.</em>
+      </h1>
+
+      <!-- Subheadline (approved copy verbatim) -->
+      <p class="cover__sub" data-kinetic data-kinetic-step="18" data-kinetic-delay="2400">
+        77% of people released from prison are rearrested within five years. We know why. And we know how to change it. Most people cycling through our justice system are traumatized people who were never given the tools to respond differently. When trauma goes untreated, it narrows the world to threat and survival — erasing any sense of future. And a life with no imaginable future is one of the most powerful drivers of crime we know. <strong>RISE was built to change that</strong>
+      </p>
+
+      <!-- CTAs -->
+      <nav class="cover__cta" aria-label="Primary calls to action">
+        <a class="cover__cta-link" href="#for-das" data-magnetic="0.18">
+          <span class="cover__cta-no">01</span>
+          <span class="cover__cta-label">Partner With Us</span>
+          <span class="cover__cta-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cover__cta-link" href="#for-funders" data-magnetic="0.18">
+          <span class="cover__cta-no">02</span>
+          <span class="cover__cta-label">Support the Mission</span>
+          <span class="cover__cta-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cover__cta-link" href="#model" data-magnetic="0.18">
+          <span class="cover__cta-no">03</span>
+          <span class="cover__cta-label">See How It Works</span>
+          <span class="cover__cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+
+      <!-- Credibility line at the foot -->
+      <aside class="cover__credit">
+        Developed by world-leading trauma specialists. Partnered with leading academic medical institutions. Designed for district attorneys, cities, and communities ready to lead.
+      </aside>
+
+    </div>
+  </div>
+
+</header>
+
+<style>
+/* =========================================================
+   COVER — full-bleed photograph with overlaid bold headline
+   ========================================================= */
+.cover {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--bone);
+  margin-top: -65px;
+  padding-top: 65px;
+  background: var(--ink);
+}
+.cover__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  z-index: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  animation: coverBgIn 1600ms 200ms cubic-bezier(.2,.7,.2,1) forwards, coverBgDrift 20s 1800ms ease-out forwards;
+  will-change: transform, opacity;
+}
+@keyframes coverBgIn { to { opacity: 1; } }
+@keyframes coverBgDrift { from { transform: scale(1.04); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .cover__bg { opacity: 1; transform: none; animation: none; }
+}
+
+.cover__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(14,16,20,0.45) 0%, rgba(14,16,20,0.10) 35%, rgba(14,16,20,0.30) 65%, rgba(14,16,20,0.92) 100%),
+    linear-gradient(90deg, rgba(14,16,20,0.55) 0%, rgba(14,16,20,0.20) 50%, rgba(14,16,20,0) 80%);
+}
+
+.cover__overlay {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(56px, 9vw, 112px) var(--gutter) clamp(28px, 4vw, 56px);
+}
+.cover__overlay-inner {
+  max-width: min(1000px, 100%);
+  width: 100%;
+  margin-left: max(0px, calc((100% - var(--max)) / 2));
+}
+
+.cover__open {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stone-soft);
+  margin-bottom: var(--s-3);
+}
+
+.cover__h {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 7.5vw, 120px);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  color: var(--bone);
+  margin: 0 0 var(--s-6);
+  max-width: 16ch;
+  text-wrap: balance;
+  font-variation-settings: "opsz" 72;
+  font-feature-settings: "lnum", "kern";
+  text-shadow: 0 2px 32px rgba(0,0,0,0.35);
+}
+.cover__h-em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--bone);
+  letter-spacing: -0.025em;
+}
+
+.cover__sub {
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  color: rgba(238, 234, 224, 0.88);
+  max-width: 64ch;
+  margin: 0 0 var(--s-6);
+  text-wrap: pretty;
+  text-shadow: 0 1px 20px rgba(0,0,0,0.4);
+}
+.cover__sub strong { color: var(--bone); font-weight: 500; }
+
+.cover__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(238, 234, 224, 0.22);
+  margin-bottom: var(--s-5);
+  max-width: 640px;
+}
+.cover__cta-link {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: var(--s-4);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(238, 234, 224, 0.18);
+  color: var(--bone);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 1.2vw, 19px);
+  letter-spacing: -0.005em;
+  transition: color 200ms var(--ease), padding-left 240ms var(--ease), border-bottom-color 200ms var(--ease);
+  will-change: transform;
+}
+.cover__cta-link:hover {
+  color: var(--bone);
+  padding-left: 8px;
+  border-bottom-color: var(--bone);
+}
+.cover__cta-no {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--stone-soft);
+  letter-spacing: 0.06em;
+}
+.cover__cta-link:hover .cover__cta-no { color: var(--bone); }
+.cover__cta-label { font-weight: 400; }
+.cover__cta-arrow {
+  font-family: var(--font-mono);
+  color: var(--stone-soft);
+  transition: transform 220ms var(--ease), color 200ms var(--ease);
+}
+.cover__cta-link:hover .cover__cta-arrow { transform: translateX(8px); color: var(--bone); }
+
+.cover__credit {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(238, 234, 224, 0.65);
+  max-width: 64ch;
+  letter-spacing: -0.005em;
+}
+
+@media (max-width: 720px) {
+  .cover__h { font-size: clamp(44px, 12vw, 72px); }
+}
+</style>
+
+<style>
+</style>
+
+
+<!-- ============================ SECTION 02 — THE PROBLEM ============================ -->
+<section class="section section--bone section--breathe" id="problem" data-chapter="Problem" data-screen-label="02 Problem" style="padding: 0px 0px 24px">
+  <div class="container">
+    <header class="section-head" style="margin: 0px 149px">
+      <h2 class="h2" data-reveal style="margin: 24px 0px">The recidivism crisis is not a mystery.<br><span style="color:var(--ink-mute)">It is an untreated trauma epidemic.</span></h2>
+    </header>
+
+    <div class="problem__layout" style="gap: 12px">
+      <div class="problem__lede prose" data-reveal>
+        <p style="width: 1190px">The United States incarcerates more people than any nation on earth — spending over <strong>$80 billion</strong> each year doing so. Within three years of release, 67–77% of individuals are rearrested. Over a decade, that number climbs above 80%.</p>
+        <p style="width: 1190px">We have built the most expensive recidivism machine in human history — and called it justice. Something is broken, and the question we rarely ask is: <strong>why do people keep returning to jail?</strong></p>
+      </div>
+
+      <aside class="problem__aside">
+        <p>Research consistently shows that up to <strong>95%</strong> of incarcerated individuals have experienced significant trauma. The average Adverse Childhood Experience (ACE) score among incarcerated individuals is <strong>7</strong> — compared to a national average of less than 2. An ACE score of 4 or higher is associated with dramatically elevated risks of addiction, mental illness, and violence. Thirty to sixty percent of incarcerated men meet full diagnostic criteria for Post-Traumatic Stress Disorder — compared to 3–6% of the general population.</p>
+        <p class="problem__aside-conclude" style="padding: 22px 0px 0px">Without treating the trauma, we’re not solving the underlying problem. We are warehousing suffering and releasing it back into communities, untreated. Something fundamentally different is needed.</p>
+      </aside>
+    </div>
+    <!-- Stats — two rows, typographic, no fills -->
+    <div class="problem__stats">
+      <div class="problem__stats-row problem__stats-row--three">
+        <div class="stat-cell" style="padding: 12px 36px; height: 200px">
+          <span class="stat-cell__tag">Trauma prevalence</span>
+          <div class="stat-cell__num" data-countup="95" data-suffix="%">95%</div>
+          <div class="stat-cell__label">of incarcerated individuals have experienced significant trauma</div>
+        </div>
+        <div class="stat-cell" style="padding: 12px 36px; height: 200px">
+          <span class="stat-cell__tag">Average ACE score</span>
+          <div class="stat-cell__num" data-countup="7">7</div>
+          <div class="stat-cell__label">among the incarcerated population</div>
+        </div>
+        <div class="stat-cell" style="padding: 12px 36px; height: 200px">
+          <span class="stat-cell__tag">5-year rearrest rate</span>
+          <div class="stat-cell__num" data-countup="77" data-suffix="%">77%</div>
+          <div class="stat-cell__label">re-arrested within 5 years of release</div>
+        </div>
+      </div>
+      <div class="problem__stats-row problem__stats-row--two">
+        <div class="stat-cell" style="padding: 12px 36px">
+          <span class="stat-cell__tag">Annual US spend</span>
+          <div class="stat-cell__num" data-countup="80" data-prefix="$" data-suffix="B">$80B</div>
+          <div class="stat-cell__label">spent annually on incarceration in the US</div>
+        </div>
+        <div class="stat-cell" style="padding: 12px 36px">
+          <span class="stat-cell__tag">Cost per person</span>
+          <div class="stat-cell__num">$78K</div>
+          <div class="stat-cell__label">average annual cost per incarcerated person (plus $40–50K to process a defendant through the system prior to incarceration)</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ SECTION SEPARATOR — QUOTE BAND ============================ -->
+<section class="quote-band quote-band--sweater" aria-label="Pullquote" style="padding: 36px 0px">
+  <figure class="quote-band__inner" style="gap: 0px">
+    <span class="quote-band__mark" aria-hidden="true">“</span>
+    <blockquote class="quote-band__quote">We have spent decades trying to correct behavior without healing the underlying trauma that drives it. RISE was built to close that gap.</blockquote>
+  </figure>
+</section>
+
+<style>
+.quote-band {
+  background: var(--ledger-deep);
+  color: var(--paper);
+  padding-block: clamp(40px, 6vw, 100px);
+  position: relative;
+}
+.quote-band__inner {
+  margin: 0 auto;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--s-5);
+}
+.quote-band__mark {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(48px, 6vw, 96px);
+  line-height: 0.7;
+  color: var(--stone-soft);
+  opacity: 0.6;
+  font-variation-settings: "opsz" 144;
+}
+.quote-band__quote {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(16px, 2.15vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin: 0;
+  padding: 0;
+  max-width: 80%;
+  text-wrap: balance;
+}
+.quote-band--pivot {
+  padding-block: clamp(64px, 10vw, 160px);
+}
+
+/* Slate treatment — matches the research band's t-shirt blue */
+.quote-band--slate {
+  background:
+    radial-gradient(110% 80% at 20% 15%, rgba(108, 124, 138, 0.40) 0%, transparent 65%),
+    linear-gradient(135deg, #3E4A56 0%, #232A33 100%);
+}
+
+/* Sweater treatment — burnt terracotta gradient matched to the hero photograph */
+.quote-band--sweater {
+  background:
+    radial-gradient(120% 90% at 80% 10%, rgba(201, 117, 88, 0.55) 0%, transparent 60%),
+    linear-gradient(135deg, #7E3924 0%, #5C2917 100%);
+}
+.quote-band--sweater .quote-band__mark {
+  color: #E5C16A;
+  opacity: 0.6;
+}
+.quote-band--sweater .quote-band__quote {
+  color: var(--paper);
+}
+</style>
+
+<style>
+.plate { margin: 0; }
+.plate image-slot { border: 1px solid var(--rule); border-radius: var(--radius); display: block; }
+.plate__cap { display: flex; gap: var(--s-4); margin-top: var(--s-4); flex-wrap: wrap; align-items: baseline; color: var(--ink-mute); }
+</style>
+
+<style>
+/* Section breathing — applied where we want hero-parity vertical rhythm */
+.section--breathe { padding-block: clamp(64px, 7vw, 128px); }
+
+.problem__layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-7);
+  margin-bottom: var(--s-9);
+  max-width: 80%;
+  margin-inline: auto;
+}
+#problem .section-head { max-width: 80%; margin-inline: auto; }
+
+.problem__layout p {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+.problem__layout p:last-child { margin-bottom: 0; }
+.problem__layout strong { font-weight: 500; color: var(--ink); }
+
+.problem__aside {
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--rule);
+}
+.problem__aside-conclude {
+  font-weight: 500;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
+  margin-top: var(--s-4) !important;
+}
+
+.problem__stats {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  max-width: 80%;
+  margin-inline: auto;
+}
+.problem__stats-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+.problem__stats-row:last-child { border-bottom: 0; }
+@media (min-width: 720px) {
+  .problem__stats-row--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .problem__stats-row--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.stat-cell {
+  padding: clamp(32px, 3.5vw, 56px) clamp(24px, 2.4vw, 36px);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--rule);
+  min-height: 300px;
+}
+.stat-cell:last-child { border-right: 0; }
+@media (max-width: 719px) {
+  .stat-cell { border-right: 0; border-bottom: 1px solid var(--rule); min-height: 0; padding-block: clamp(24px, 5vw, 40px); }
+  .stat-cell:last-child { border-bottom: 0; }
+}
+.stat-cell__tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: clamp(28px, 3vw, 44px);
+}
+.stat-cell__num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(44px, 5vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 72;
+  font-feature-settings: "lnum", "kern";
+  margin-bottom: clamp(12px, 1.3vw, 20px);
+}
+.stat-cell__label {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  letter-spacing: -0.002em;
+  max-width: 32ch;
+}
+</style>
+
+
+<!-- ============================ SECTION 03 — SCIENCE & APPROACH ============================ -->
+<section class="section section--breathe" id="approach" data-chapter="Approach" data-screen-label="03 Science" style="padding: 0px">
+  <div class="container">
+    <header class="section-head" style="margin: 0px 149px">
+      <h2 class="h2" data-reveal>Trauma lives in the body. <span style="color:var(--moss)">So does healing.</span></h2>
+    </header>
+
+    <div class="approach__prose">
+      <p>Neuroscience has revealed something that changes everything: trauma is not primarily a cognitive experience — it is a physiological one. When a person experiences overwhelming stress, the nervous system adapts to survive. It becomes hypervigilant or numb, reactive or shut down. The brain's threat-detection systems grow hypersensitive. Impulse regulation deteriorates. The body learns to operate in survival mode — and survival mode does not pause to make thoughtful decisions.</p>
+
+      <p>As Dr. Bessel van der Kolk, has documented in his landmark work, <em>The Body Keeps the Score</em>. Rational insight alone cannot undo what the nervous system has encoded. <strong>Healing must engage the body and the mind.</strong> This is the scientific foundation of RISE.</p>
+
+      <p>Integrative Somatic Trauma Therapy is a clinically grounded, body-based framework that works directly with the nervous system. Participants learn to recognize physical signs of activation, regulate heightened or shut-down states, and develop awareness of impulses before they become actions. This approach helps reclaim agency and control, reducing dysregulated, impulsive, and fear-driven behavior.</p>
+
+      <p>Ketamine-Assisted Therapy (KAT) functions as a therapeutic catalyst within this framework. Its unique pharmacology opens a window of neuroplasticity — a rare state in which the brain becomes receptive to what it could not process before. Participants are able to witness their own traumatic experiences from a distance, without the grip of fear, and with a quality of self-compassion that trauma typically makes impossible. In that space, the fear response that has silently driven so much behavior can finally be released. New neural pathways form and take hold through integration, making the shift permanent — addressing the neurological roots of addiction alongside trauma.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ RESEARCH BAND — SECTION SEPARATOR ============================ -->
+<section class="research-band" aria-label="Evidence base" style="padding: 36px 0px">
+  <div class="research-band__inner">
+    <div class="research-band__grid">
+      <article class="research-band__entry">
+        <header class="research-band__byline">
+          <h3 class="research-band__author">Hendricks et al.</h3>
+          <div class="research-band__meta">
+            <span class="research-band__year">2018</span>
+            <span class="research-band__scope">480,000+ U.S. adults, 13 years of data.</span>
+          </div>
+        </header>
+        <p class="research-band__finding">Psychedelic-assisted therapeutic approaches are associated with <strong>27% reduced property crime</strong>, <strong>18% reduced violent crime arrest</strong>, and <strong>12% reduced assault</strong>.</p>
+      </article>
+
+      <article class="research-band__entry">
+        <header class="research-band__byline">
+          <h3 class="research-band__author">Jones &amp; Nock</h3>
+          <div class="research-band__meta">
+            <span class="research-band__year">2022</span>
+            <span class="research-band__scope">211,000+ nationally representative adults.</span>
+          </div>
+        </header>
+        <p class="research-band__finding">Reductions in criminal arrest outcomes ranging from <strong>27% to 70%</strong> across multiple crime categories. Psychedelics were the only substances consistently associated with reduced — not increased — criminal behavior.</p>
+      </article>
+
+      <article class="research-band__entry">
+        <header class="research-band__byline">
+          <h3 class="research-band__author">Neitzke-Spruill</h3>
+          <div class="research-band__meta">
+            <span class="research-band__year">2022</span>
+            <span class="research-band__scope">Concord Prison Experiment analysis.</span>
+          </div>
+        </header>
+        <p class="research-band__finding">Structured therapeutic experiences catalyze self-reflective cognitive shifts critical to desistance. Integration support and community wraparound make those shifts durable — precisely the model RISE delivers.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+.research-band {
+  background:
+    radial-gradient(110% 80% at 20% 15%, rgba(108, 124, 138, 0.40) 0%, transparent 65%),
+    linear-gradient(135deg, #3E4A56 0%, #232A33 100%);
+  color: var(--paper);
+  padding-block: clamp(48px, 8vw, 120px);
+}
+.research-band__inner {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.research-band__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+.research-band__kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone-soft);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.research-band__rule {
+  flex: 1; height: 1px; background: var(--stone-soft); opacity: 0.4; border: 0; margin: 0;
+}
+.research-band__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 4vw, 56px);
+}
+@media (min-width: 900px) {
+  .research-band__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(32px, 4vw, 64px);
+  }
+}
+.research-band__entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+.research-band__byline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.research-band__author {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  color: var(--paper);
+  margin: 0;
+  font-variation-settings: "opsz" 72;
+}
+.research-band__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.research-band__year {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--stone-soft);
+  font-weight: 500;
+}
+.research-band__scope {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(238, 234, 224, 0.7);
+  letter-spacing: -0.002em;
+}
+.research-band__finding {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(238, 234, 224, 0.92);
+  letter-spacing: -0.002em;
+  margin: 0;
+  text-wrap: pretty;
+}
+.research-band__finding strong {
+  font-weight: 500;
+  color: #E5C16A;
+}
+</style>
+
+<style>
+.approach__prose {
+  max-width: 80%;
+  margin-inline: auto;
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+#approach .section-head { max-width: 80%; margin-inline: auto; }
+.approach__prose:last-of-type {
+  margin-bottom: clamp(56px, 7vw, 96px);
+}
+.approach__prose p {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+.approach__prose p:last-child { margin-bottom: 0; }
+.approach__prose strong { font-weight: 500; color: var(--ink); }
+.approach__prose em { font-style: italic; }
+
+/* In-prose pull-quotes — lift a sentence to a typographic peak */
+.approach__pull {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(28px, 3.8vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: clamp(40px, 5vw, 72px) auto;
+  padding: 0;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 80%;
+}
+
+/* Pivot — the act break between diagnosis and treatment */
+.approach__pivot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-6);
+  padding-block: clamp(56px, 8vw, 112px);
+  margin: 0 auto;
+  width: 100%;
+}
+.approach__pivot-mark {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--ledger);
+}
+.approach__pivot-quote {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(40px, 6vw, 88px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 80%;
+}
+
+.research {
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(32px, 4vw, 56px);
+  max-width: 80%;
+  margin-inline: auto;
+}
+.research__head { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-7); }
+.research__kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  white-space: nowrap;
+  font-weight: 500;
+}
+.research__rule { flex: 1; height: 1px; background: var(--rule); border: 0; margin: 0; }
+
+.research__list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--ink);
+}
+.research__entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  padding: clamp(32px, 4vw, 56px) 0;
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 900px) {
+  .research__entry {
+    grid-template-columns: 5fr 7fr;
+    gap: clamp(40px, 6vw, 96px);
+    align-items: baseline;
+  }
+}
+.research__byline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.research__author {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+  font-variation-settings: "opsz" 72;
+}
+.research__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.research__year {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-mute);
+  font-weight: 500;
+}
+.research__scope {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-mute);
+  letter-spacing: -0.002em;
+}
+.research__finding {
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 1.2vw, 19px);
+  line-height: 1.55;
+  color: var(--ink);
+  letter-spacing: -0.002em;
+  margin: 0;
+  text-wrap: pretty;
+}
+.research__finding strong {
+  font-weight: 500;
+  color: var(--ledger);
+}
+</style>
+
+
+<!-- ============================ SECTION 04 — THE MODEL ============================ -->
+<section class="section" id="model" data-chapter="Model" data-screen-label="04 Model" style="padding: 0px">
+  <div class="container" style="padding: 0px 56px 24px">
+    <header class="section-head" style="margin: 0px 149px">
+      <h2 class="h2" data-reveal style="margin: 22px 0px">A new model. Grounded in science. <span style="color:var(--ink-mute)">Built for people.</span></h2>
+    </header>
+
+    <div class="section-head__lede prose lead" style="max-width: 80%; margin-inline: auto;">
+      <p>RISE operates within a formal diversion framework in close partnership with District Attorney's offices — legally integrated, clinically rigorous, and deeply human. Designed to produce measurable outcomes while treating every participant as a full human being.</p>
+    </div>
+
+    <!-- 5-step process -->
+    <div class="model__track">
+      <div class="model__line" aria-hidden="true"></div>
+      <ol class="model__steps">
+        <li class="model__step">
+          <div class="model__num">01</div>
+          <h3 class="h4">Referral &amp; Screening</h3>
+          <p class="small">Participants are identified by a process developed in coordination with the DA’s office and referred — with full voluntary consent — to RISE for comprehensive medical and clinical screening. RISE is not a universal solution. Rigorous medical, psychiatric, and legal screening ensures that every participant is clinically appropriate, voluntarily enrolled, and genuinely positioned to benefit.</p>
+        </li>
+        <li class="model__step">
+          <div class="model__num">02</div>
+          <h3 class="h4">Stabilization &amp; Skill-Building</h3>
+          <p class="small">Individual and group therapy building nervous system regulation, somatic awareness, and emotional regulation. The internal foundation — and peer community — is essential to lasting change.</p>
+        </li>
+        <li class="model__step">
+          <div class="model__num">03</div>
+          <h3 class="h4">Therapeutic Intervention</h3>
+          <p class="small">Ketamine-Assisted Therapy as a therapeutic catalyst within a rigorously supervised clinical container — preparation, supervised sessions, and dedicated integration therapy. Group therapy continues throughout.</p>
+        </li>
+        <li class="model__step">
+          <div class="model__num">04</div>
+          <h3 class="h4">Integration &amp; Monitoring</h3>
+          <p class="small">Case managers coordinate resources, including childcare and transportation. Peer support specialists with lived experience provide mentorship. Compliance monitored. Court reporting maintained.</p>
+        </li>
+        <li class="model__step">
+          <div class="model__num">05</div>
+          <h3 class="h4">Graduation</h3>
+          <p class="small">Graduates from the program have charges dismissed. Participants who do not meet compliance requirements return to standard prosecution. <strong>Accountability is maintained at every step.</strong></p>
+        </li>
+        <li class="model__step model__step--continues" aria-hidden="true">
+          <div class="model__num model__num--continues">→</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+.model__track {
+  position: relative;
+  margin-top: var(--s-7);
+  max-width: 80%;
+  margin-inline: auto;
+}
+#model .section-head { max-width: 80%; margin-inline: auto; }
+.model__line {
+  position: absolute;
+  top: 32px; left: 0; right: 0; height: 1px;
+  background: var(--rule);
+}
+.model__steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) auto;
+  gap: var(--s-5);
+  list-style: none;
+  padding: 0; margin: 0;
+  position: relative;
+  align-items: start;
+}
+.model__step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding-top: 64px;
+  position: relative;
+}
+.model__num {
+  position: absolute;
+  top: 0; left: 0;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--bone);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+}
+.model__step--accent .model__num {
+  background: var(--moss);
+  color: var(--bone);
+  border-color: var(--moss);
+}
+.model__step h3 { margin: 0; }
+.model__step--continues { flex: 0 0 auto; padding-top: 0; min-height: 56px; display: flex; align-items: center; }
+
+/* Tablet — model steps wrap to a 3-then-2 grid */
+@media (max-width: 979px) {
+  .model__steps { grid-template-columns: repeat(3, 1fr); }
+  .model__line { display: none; }
+  .model__step--continues { display: none; }
+}
+/* Mobile — model steps stack into a single column */
+@media (max-width: 639px) {
+  .model__steps { grid-template-columns: 1fr; gap: var(--s-6); }
+  .model__step { padding-top: 0; padding-left: 72px; min-height: 56px; }
+  .model__num { top: 0; }
+}
+.model__num--continues {
+  position: static !important;
+  color: var(--ink) !important;
+  font-size: 20px !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .model__num--continues { }
+}
+.model__tag {
+  margin-top: auto;
+  padding-top: var(--s-3);
+  border-top: 1px dashed var(--rule);
+  color: var(--ink-mute);
+}
+</style>
+
+
+<!-- ============================ SECTION 05 — SING YOUR SONG ============================ -->
+<!-- Image break: full-bleed photograph above the parable -->
+<figure class="song-break">
+  <img src="images/song-tribe.png" alt="A circle of community gathered around one person at dusk." class="song-break__img">
+</figure>
+
+<section class="section section--breathe song" id="song" data-chapter="Song" data-screen-label="05 Sing Your Song" style="padding: 24px 0px">
+  <div class="container">
+    <header class="section-head" style="margin: 0px 149px">
+      <span class="section-head__kicker">A Tradition Worth Remembering</span>
+      <h2 class="h2" data-reveal style="margin: 22px 0px">A person who has lost their way, <strong style="color:var(--ledger); font-weight:500">can find their way home.</strong></h2>
+    </header>
+
+    <div class="song__prose">
+      <p>When a woman in a certain African tribe knows she is pregnant, she goes out into the wilderness with a few friends. Together they pray and meditate until they hear the baby’s unique song. They return to the tribe and teach it to everyone.</p>
+
+      <p>When the child is born, the community gathers and sings the child’s song. When the child enters school. When they pass into adulthood. At marriage. And at the end of life.</p>
+
+      <p>There is one other occasion upon which the villagers sing to the child.</p>
+
+      <p>If, at any time during the person’s life, they commit a crime or socially aberrant act, they are called to the center of the village. The people form a circle around them — and sing their song.</p>
+
+      <p>Because they understand something the modern criminal justice system has forgotten: <strong>a person who has lost their way has not lost their song.</strong></p>
+
+      <p class="song__close">RISE was built on this understanding. Our work is not punishment. <strong style="color:var(--ledger); font-weight:500">It is remembrance.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SECTION SEPARATOR — BLESSING QUOTE BAND ============================ -->
+<section class="quote-band quote-band--slate" aria-label="Pullquote" style="padding: 36px 0px">
+  <figure class="quote-band__inner" style="gap: 0px">
+    <span class="quote-band__mark" aria-hidden="true">“</span>
+    <blockquote class="quote-band__quote">Those who love you are not fooled by mistakes you have made or dark images you hold about yourself. They remember your beauty when you feel ugly; your wholeness when you are broken; your innocence when you feel guilty; and your purpose when you are confused.</blockquote>
+  </figure>
+</section>
+
+<style>
+.song-break {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: var(--ink);
+}
+.song-break__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;
+  max-height: 58vh;
+}
+
+.song {
+  background: var(--paper);
+  padding-block: clamp(40px, 5vw, 80px);
+}
+.song .section-head { max-width: 80%; margin-inline: auto; margin-bottom: clamp(32px, 4vw, 56px); }
+.song__prose {
+  max-width: 80%;
+  margin-inline: auto;
+}
+.song__prose p {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+.song__prose p:last-child { margin-bottom: 0; }
+.song__prose strong { font-weight: 500; color: var(--ink); }
+
+.song__quote {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: clamp(24px, 3vw, 40px) auto;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 72ch;
+}
+
+.song__close {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem) !important;
+  font-weight: 500;
+  margin-top: clamp(24px, 3vw, 40px) !important;
+}
+</style>
+
+
+<!-- ============================ SECTION 06 — WHY THIS IS DIFFERENT ============================ -->
+<section class="section" id="different" data-chapter="Different" data-screen-label="06 Different" style="padding: 0px 0px 24px">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="h2" data-reveal>The future of criminal justice reform is not punishment. <span style="color:var(--moss)">It's healing, accountability, and restoration.</span></h2>
+    </header>
+
+    <!-- Comparison table: Traditional vs. RISE across six dimensions -->
+    <div class="compare-table" role="table" aria-label="Traditional approach vs. RISE">
+      <div class="compare-table__head" role="row">
+        <div class="compare-table__col-head compare-table__col-head--old" role="columnheader">Traditional</div>
+        <div class="compare-table__col-head compare-table__col-head--new" role="columnheader">RISE</div>
+      </div>
+      <div class="compare-table__body">
+        <div class="compare-table__row" role="row">
+          <div class="compare-table__cell compare-table__cell--old" role="cell">Address behavior through deterrence and punishment</div>
+          <div class="compare-table__cell compare-table__cell--new" role="cell">Addresses neurobiological drivers of behavior</div>
+        </div>
+        <div class="compare-table__row" role="row">
+          <div class="compare-table__cell compare-table__cell--old" role="cell">Treat compliance as the goal</div>
+          <div class="compare-table__cell compare-table__cell--new" role="cell">Treats genuine regulation and lasting change as the goal</div>
+        </div>
+        <div class="compare-table__row" role="row">
+          <div class="compare-table__cell compare-table__cell--old" role="cell">Leave trauma untreated at its root</div>
+          <div class="compare-table__cell compare-table__cell--new" role="cell">Treats trauma at its root — in the body and nervous system</div>
+        </div>
+        <div class="compare-table__row" role="row">
+          <div class="compare-table__cell compare-table__cell--old" role="cell">Short-term, disconnected interventions</div>
+          <div class="compare-table__cell compare-table__cell--new" role="cell">Structured, phased, community-integrated care</div>
+        </div>
+        <div class="compare-table__row" role="row">
+          <div class="compare-table__cell compare-table__cell--old" role="cell">67–77% re-arrest rates within 5 years</div>
+          <div class="compare-table__cell compare-table__cell--new" role="cell">Designed for durable desistance — supported by evidence</div>
+        </div>
+        <div class="compare-table__row" role="row">
+          <div class="compare-table__cell compare-table__cell--old" role="cell">$78,000 per person per year — with diminishing returns</div>
+          <div class="compare-table__cell compare-table__cell--new" role="cell">$30–$53M projected savings per 200-participant cohort</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ SECTION SEPARATOR — RISE QUOTE BAND ============================ -->
+<section class="quote-band quote-band--sweater" aria-label="Pullquote" style="padding: 36px 0px">
+  <figure class="quote-band__inner" style="gap: 0px">
+    <span class="quote-band__mark" aria-hidden="true">“</span>
+    <blockquote class="quote-band__quote">RISE does not replace accountability. It makes accountability possible — by ensuring individuals have the internal capacity to regulate behavior, engage meaningfully in supervision, and make genuinely different choices.</blockquote>
+  </figure>
+</section>
+
+<style>
+.redline {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+#different .section-head { max-width: 80%; margin-inline: auto; }
+#different .pullquote-block { max-width: 80%; margin-inline: auto; }
+/* Comparison table — two-column scannable layout */
+.compare-table {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.compare-table__head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.compare-table__col-head {
+  padding: 16px clamp(20px, 2vw, 32px);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.compare-table__col-head--old {
+  color: var(--counsel);
+  border-right: 1px solid var(--rule);
+}
+.compare-table__col-head--new {
+  color: var(--ledger);
+  background: rgba(38, 72, 123, 0.04);
+}
+.compare-table__body { display: flex; flex-direction: column; }
+.compare-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+.compare-table__row:last-child { border-bottom: 1px solid var(--ink); }
+.compare-table__cell {
+  padding: clamp(20px, 2.2vw, 32px) clamp(20px, 2vw, 32px);
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.compare-table__cell--old {
+  color: var(--ink-mute);
+  border-right: 1px solid var(--rule);
+}
+.compare-table__cell--new {
+  color: var(--ink);
+  font-weight: 600;
+  background: rgba(38, 72, 123, 0.04);
+}
+
+@media (max-width: 700px) {
+  .compare-table__head { display: none; }
+  .compare-table__row {
+    grid-template-columns: 1fr;
+    padding: clamp(20px, 4vw, 32px) 0;
+    gap: 0;
+  }
+  .compare-table__cell {
+    padding: 12px clamp(16px, 4vw, 24px);
+    border-right: 0;
+    position: relative;
+  }
+  .compare-table__cell::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .compare-table__cell--old::before {
+    content: "Traditional";
+    color: var(--counsel);
+  }
+  .compare-table__cell--new::before {
+    content: "RISE";
+    color: var(--ledger);
+  }
+}
+</style>
+<script>
+  (function(){
+    const pairs = document.querySelectorAll('.redline__pair');
+    if (!pairs.length) return;
+    if (!('IntersectionObserver' in window)) {
+      pairs.forEach(p => p.classList.add('is-in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
+    pairs.forEach(p => io.observe(p));
+  })();
+</script>
+
+
+<!-- ============================ SECTION 07 — IMPACT & OUTCOMES ============================ -->
+<section class="section section--bone section--breathe" id="outcomes" data-chapter="Outcomes" data-screen-label="07 Impact" style="padding: 0px 0px 24px">
+  <div class="container">
+    <header class="section-head" style="margin: 0px 149px">
+      <h2 class="h2" data-reveal style="margin: 24px 0px">What changes when healing happens.</h2>
+    </header>
+
+    <div class="outcomes__inner" style="gap: 2px">
+
+      <!-- Qualitative block -->
+      <div class="outcomes__qual">
+        <div class="outcomes__qual-grid" style="padding: 0px">
+          <article class="outcomes__qual-col">
+            <h3 class="outcomes__qual-title">Individual</h3>
+            <ul class="outcomes__qual-list">
+              <li>Reduced PTSD and depression symptoms</li>
+              <li>Decreased substance use</li>
+              <li>Improved emotional regulation</li>
+              <li>Increased housing stability</li>
+              <li>Employment</li>
+            </ul>
+          </article>
+          <article class="outcomes__qual-col">
+            <h3 class="outcomes__qual-title">Justice System</h3>
+            <ul class="outcomes__qual-list">
+              <li>Reduced re-arrest and reincarceration</li>
+              <li>Higher diversion completion</li>
+              <li>Reduced court and supervision burden</li>
+            </ul>
+          </article>
+          <article class="outcomes__qual-col">
+            <h3 class="outcomes__qual-title">Community</h3>
+            <ul class="outcomes__qual-list">
+              <li>Reduced crime through fewer repeat offenses</li>
+              <li>Stronger families</li>
+              <li>More productive community members</li>
+              <li>Reduced burden on public safety systems</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- Quantitative block -->
+      <div class="outcomes__quant">
+        <div class="problem__stats outcomes__quant-stats">
+          <div class="problem__stats-row problem__stats-row--three">
+            <div class="stat-cell" style="padding: 12px 36px">
+              <span class="stat-cell__tag">Year One</span>
+              <div class="stat-cell__num">$7–$11M</div>
+              <div class="stat-cell__label">in direct diversion savings per 200-participant cohort — year one alone</div>
+            </div>
+            <div class="stat-cell" style="padding: 12px 36px">
+              <span class="stat-cell__tag">Three-Year Projection</span>
+              <div class="stat-cell__num">$23–$42M</div>
+              <div class="stat-cell__label">in projected 3-year recidivism avoidance savings per cohort</div>
+            </div>
+            <div class="stat-cell stat-cell--total" style="padding: 12px 36px 56px">
+              <span class="stat-cell__tag">Total Societal Savings</span>
+              <div class="stat-cell__num">$30–$53M</div>
+              <div class="stat-cell__label">total projected societal savings — a <strong>4–7x return</strong>, significantly exceeding the $2–$4 drug court benchmark</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+#outcomes .section-head { max-width: 80%; margin-inline: auto; }
+
+.outcomes__inner {
+  max-width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 7vw, 96px);
+}
+
+/* Qualitative block */
+.outcomes__qual-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 4vw, 64px);
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(28px, 3vw, 48px);
+}
+@media (min-width: 800px) {
+  .outcomes__qual-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.outcomes__qual-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding: clamp(24px, 2.4vw, 36px);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--rule);
+}
+.outcomes__qual-title {
+  font-family: var(--font-sans);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+.outcomes__qual-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.outcomes__qual-list li {
+  padding-left: 18px;
+  position: relative;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -0.002em;
+}
+.outcomes__qual-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ledger);
+}
+
+/* Quantitative block — break out of the 80% inner wrap so stats hit container 80% directly */
+.outcomes__quant-stats {
+  max-width: 100%;
+  margin-top: clamp(28px, 3vw, 48px);
+}
+.stat-cell--total .stat-cell__num { color: var(--ledger); }
+.stat-cell__label strong { color: var(--ink); font-weight: 500; }
+</style>
+
+
+<!-- Section divider — chapter break between Outcomes and For DAs -->
+<div class="section-divider" aria-label="For District Attorneys and Cities" style="padding: 24px 0px">
+  <span class="section-divider__rule"></span>
+  <span class="section-divider__mark">For District Attorneys &amp; Cities</span>
+  <span class="section-divider__rule"></span>
+</div>
+
+<!-- ============================ SECTION 08 — FOR DAs ============================ -->
+<section class="section section--breathe" id="for-das" data-chapter="For DAs" data-screen-label="08 For DAs" style="padding: 0px 0px 128px">
+  <div class="container" style="padding: 0px 56px 24px">
+    <header class="section-head" style="margin: 0px 149px">
+      <h2 class="h2" data-reveal style="margin: 24px 0px">Public safety is not just about punishment. <span style="color:var(--ledger)">It's about crime prevention.</span></h2>
+    </header>
+
+    <div class="das__lede">
+      <p>RISE works directly with DA's offices and city governments to implement a clinically rigorous diversion program that is legally sound, fiscally responsible, and demonstrably effective.</p>
+    </div>
+
+    <ol class="das__pillars">
+      <li class="das__pillar" style="padding: 12px 0px 20px">
+        <div class="das__body">
+          <h3 class="das__title">Legal Integration</h3>
+          <p>Referrals through your office. Eligibility criteria set by your team. Full compliance monitoring and court reporting. Accountability is maintained at every step.</p>
+        </div>
+      </li>
+      <li class="das__pillar" style="padding: 12px 0px">
+        <div class="das__body">
+          <h3 class="das__title">Scalable Model</h3>
+          <p>Rolling cohort enrollment — 10–12 participants per week — scales to your jurisdiction’s capacity without overwhelming clinical or case management systems.</p>
+        </div>
+      </li>
+      <li class="das__pillar" style="padding: 12px 0px">
+        <div class="das__body">
+          <h3 class="das__title">Measurable Outcomes</h3>
+          <p>Quarterly compliance reports. Formal evaluation at 12 and 36 months. Recidivism tracking via state databases. Independently validated findings.</p>
+        </div>
+      </li>
+      <li class="das__pillar" style="padding: 12px 0px">
+        <div class="das__body">
+          <h3 class="das__title">Full Support</h3>
+          <p>RISE provides clinical staff, case management, peer support, wraparound coordination, training, data infrastructure, and evaluation. <strong>You provide referrals and legal oversight.</strong> We will dovetail the program to fit within the parameters of existing diversion mechanisms.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="das__cta">
+      <p class="das__cta-line">Ready to bring RISE to your jurisdiction?</p>
+      <a class="das__cta-link" href="#for-das" data-magnetic="0.18">
+        <span>Schedule a Conversation with Our Team</span>
+        <span class="das__cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section divider — editorial chapter break ornament */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2vw, 28px);
+  max-width: 80%;
+  margin: 0 auto;
+  padding-block: clamp(48px, 7vw, 96px);
+}
+.section-divider__rule {
+  flex: 1;
+  max-width: 240px;
+  height: 1px;
+  background: var(--rule-strong);
+}
+.section-divider__mark {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+#for-das .section-head { max-width: 80%; margin-inline: auto; margin-bottom: clamp(32px, 4vw, 56px); }
+
+.das__lede {
+  max-width: 80%;
+  margin-inline: auto;
+  margin-bottom: clamp(48px, 6vw, 96px);
+}
+.das__lede p {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.das__pillars {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 80%;
+  border-top: 1px solid var(--ink);
+}
+.das__pillar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+  padding: clamp(28px, 3.5vw, 56px) 0;
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 800px) {
+  .das__pillar {
+    grid-template-columns: 280px 1fr;
+    gap: clamp(32px, 4vw, 64px);
+    align-items: baseline;
+  }
+  .das__pillar .das__body { display: contents; }
+}
+.das__num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(40px, 4vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--ledger);
+  font-variation-settings: "opsz" 72;
+  font-feature-settings: "lnum", "kern";
+}
+.das__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.das__title {
+  font-family: var(--font-sans);
+  font-size: clamp(20px, 1.8vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+.das__body p {
+  font-family: var(--font-sans);
+  font-size: clamp(1.0625rem, 1.25vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  letter-spacing: -0.002em;
+  margin: 0;
+  max-width: 64ch;
+}
+.das__body p strong { color: var(--ink); font-weight: 500; }
+
+.das__cta {
+  max-width: 80%;
+  margin: clamp(48px, 6vw, 96px) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  align-items: flex-start;
+}
+.das__cta-line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+.das__cta-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.3vw, 21px);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: gap 240ms var(--ease), color 200ms var(--ease), border-bottom-color 200ms var(--ease);
+  will-change: transform;
+}
+.das__cta-link:hover {
+  gap: var(--s-4);
+  color: var(--ledger);
+  border-bottom-color: var(--ledger);
+}
+.das__cta-arrow {
+  font-family: var(--font-sans);
+  transition: transform 220ms var(--ease);
+}
+.das__cta-link:hover .das__cta-arrow { transform: translateX(4px); }
+</style>
+
+
+<!-- ============================ SECTION 09 — FOR FUNDERS ============================ -->
+<section class="section section--breathe section--funders" id="for-funders" data-chapter="For Funders" data-screen-label="09 For Funders" style="padding: 0px 0px 24px">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="h2" data-reveal style="margin: 24px 0px">This is what upstream investment looks like.</h2>
+      <p class="funders__lede" style="margin: 0px">The cost of inaction is not zero. Every dollar not invested in trauma treatment today is a dollar — plus many more — spent on reincarceration, prosecution, supervision, and community harm tomorrow.</p>
+    </header>
+
+    <!-- ACE → cost cascade -->
+    <div class="funders__cascade">
+      <div class="funders__cascade-col">
+        <div class="funders__cascade-tag">U.S. adults with ≥1 ACE</div>
+        <div class="funders__cascade-num">63%</div>
+        <div class="funders__cascade-note">CDC, 2023 — nearly 2 in 3 American adults</div>
+      </div>
+      <div class="funders__cascade-arrow" aria-hidden="true">→</div>
+      <div class="funders__cascade-col">
+        <div class="funders__cascade-tag">Annual economic burden</div>
+        <div class="funders__cascade-num">$14.1T</div>
+        <div class="funders__cascade-note">$183B direct medical · $13.9T lost healthy life years</div>
+      </div>
+      <div class="funders__cascade-arrow" aria-hidden="true">→</div>
+      <div class="funders__cascade-col funders__cascade-col--accent">
+        <div class="funders__cascade-tag">Lifetime cost per affected adult</div>
+        <div class="funders__cascade-num">$2.4M</div>
+        <div class="funders__cascade-note">$88K every year, compounded across a population</div>
+      </div>
+    </div>
+
+    <p class="funders__bridge" style="margin: 24px 149px">The incarcerated population sits at the <strong>extreme end of this curve</strong> — with an average ACE score of 7, nearly four times the national average. They represent the highest-burden, most underserved segment of this crisis.</p>
+
+    <div class="funders__pillars">
+      <article class="funders__pillar" style="padding: 12px 0px">
+        <h3 class="funders__pillar-title">Upstream Impact</h3>
+        <p>RISE intervenes before additional incarceration occurs — among the highest-leverage points in the entire criminal justice ecosystem.</p>
+      </article>
+      <article class="funders__pillar" style="padding: 12px 0px">
+        <h3 class="funders__pillar-title">Measurable Return</h3>
+        <p>Every $1 invested in RISE is projected to generate <strong>$4–$7 in societal savings</strong> — exceeding the $2–$4 drug-court benchmark.</p>
+      </article>
+      <article class="funders__pillar" style="padding: 12px 0px">
+        <h3 class="funders__pillar-title">Systems Transformation</h3>
+        <p>RISE is a national model — designed to replicate, evaluate, and expand. Your investment funds infrastructure, evidence, and policy at scale.</p>
+      </article>
+      <article class="funders__pillar" style="padding: 12px 0px 40px">
+        <h3 class="funders__pillar-title">Credibility</h3>
+        <p>Anchored by world-leading trauma clinicians, an active NIMH R01 grant, and formal academic medical partnerships.</p>
+      </article>
+    </div>
+
+    <figure class="funders__pullquote" hidden></figure>
+
+    <div class="funders__cta">
+      <p class="funders__cta-line" style="padding: 12px">Interested in funding RISE?</p>
+      <a class="funders__cta-link" href="#for-funders" data-magnetic="0.18">
+        <span>Connect With Our Development Team</span>
+        <span class="funders__cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SECTION SEPARATOR — FUNDERS QUOTE BAND ============================ -->
+<section class="quote-band quote-band--slate" aria-label="Pullquote" style="padding: 24px 0px">
+  <figure class="quote-band__inner" style="gap: 0px">
+    <span class="quote-band__mark" aria-hidden="true">“</span>
+    <blockquote class="quote-band__quote">Investing in their healing is not charity. It is the highest-return intervention available in the entire public health and public safety landscape.</blockquote>
+  </figure>
+</section>
+
+<style>
+#for-das { background: #E8ECF1; }
+.section--funders {
+  background: var(--bone);
+  color: var(--ink);
+}
+#for-funders .section-head {
+  max-width: 80%;
+  margin-inline: auto;
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+#for-funders .section-head .h2 { color: var(--ink); }
+
+.funders__lede {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  letter-spacing: -0.005em;
+  margin: var(--s-5) 0 0;
+  text-wrap: pretty;
+}
+
+.funders__cascade {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  margin: 0 auto;
+  max-width: 80%;
+}
+@media (min-width: 900px) {
+  .funders__cascade { flex-direction: row; align-items: stretch; gap: var(--s-3); }
+}
+.funders__cascade-col {
+  flex: 1;
+  padding: clamp(28px, 3vw, 40px) clamp(24px, 2.4vw, 32px);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(31, 58, 95, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.funders__cascade-col--accent {
+  background: var(--ledger-deep);
+  border-color: var(--ledger-deep);
+  color: var(--paper);
+}
+.funders__cascade-tag {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 500;
+}
+.funders__cascade-col--accent .funders__cascade-tag { color: var(--stone-soft); }
+.funders__cascade-num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(40px, 4.5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  font-variation-settings: "opsz" 72;
+  font-feature-settings: "lnum", "kern";
+}
+.funders__cascade-col--accent .funders__cascade-num { color: #E5C16A; }
+.funders__cascade-note {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  letter-spacing: -0.002em;
+  margin-top: auto;
+}
+.funders__cascade-col--accent .funders__cascade-note { color: rgba(238, 234, 224, 0.78); }
+.funders__cascade-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ledger);
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 400;
+}
+@media (max-width: 899px) { .funders__cascade-arrow { transform: rotate(90deg); padding: 4px 0; } }
+
+.funders__bridge {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  letter-spacing: -0.005em;
+  max-width: 80%;
+  margin: clamp(48px, 6vw, 96px) auto;
+  text-wrap: pretty;
+}
+.funders__bridge strong { color: var(--ink); font-weight: 500; }
+
+.funders__pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(31, 58, 95, 0.18);
+}
+@media (min-width: 800px) {
+  .funders__pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(32px, 4vw, 64px);
+  }
+}
+.funders__pillar {
+  padding: clamp(24px, 3vw, 40px) 0;
+  border-bottom: 1px solid rgba(31, 58, 95, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.funders__pillar-title {
+  font-family: var(--font-sans);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+.funders__pillar p {
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  letter-spacing: -0.002em;
+  margin: 0;
+  max-width: 50ch;
+}
+.funders__pillar p strong { color: var(--ledger); font-weight: 500; }
+
+.funders__pullquote {
+  max-width: 80%;
+  margin: clamp(56px, 7vw, 112px) auto;
+}
+.funders__pullquote blockquote {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(24px, 3vw, 44px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  text-wrap: balance;
+  max-width: 28ch;
+}
+
+.funders__cta {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  align-items: flex-start;
+}
+.funders__cta-line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+.funders__cta-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.3vw, 21px);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: gap 240ms var(--ease), color 200ms var(--ease), border-bottom-color 200ms var(--ease);
+  will-change: transform;
+}
+.funders__cta-link:hover {
+  gap: var(--s-4);
+  color: var(--ledger);
+  border-bottom-color: var(--ledger);
+}
+.funders__cta-arrow {
+  font-family: var(--font-sans);
+  transition: transform 220ms var(--ease);
+}
+.funders__cta-link:hover .funders__cta-arrow { transform: translateX(4px); }
+</style>
+
+
+<!-- ============================ SECTION 10 — LEADERSHIP ============================ -->
+<section class="section" id="leadership" data-chapter="Leadership" data-screen-label="10 Leadership" style="padding: 24px 0px">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="h2" data-reveal style="margin: 0px">The people building this.</h2>
+    </header>
+
+    <div class="leaders">
+      <article class="leader">
+        <img src="images/scott.jpeg" alt="Dr. Scott Lyons portrait" class="leader__portrait">
+        <div class="leader__body">
+          <span class="caption">Co-Founder &amp; Program Designer</span>
+          <h3 class="h4">Dr. Scott Lyons, Ph.D., DO</h3>
+          <p class="small">Founder of The Embody Lab — the largest online somatic trauma therapy learning platform in the world — and creator of Integrative Somatic Trauma Therapy. Author of the bestselling book <em>Addicted to Drama: Healing Dependency on Crisis and Chaos in Yourself and Others</em>. With over 20 years of experience in trauma recovery and the integration of psychedelic-assisted therapy, Dr. Lyons has trained hundreds of thousands of clinicians globally.</p>
+        </div>
+      </article>
+      <article class="leader">
+        <img src="images/wendy.jpeg" alt="Dr. Wendy D'Andrea portrait" class="leader__portrait">
+        <div class="leader__body">
+          <span class="caption">Chief Science &amp; Impact Officer</span>
+          <h3 class="h4">Dr. Wendy D'Andrea, Ph.D.</h3>
+          <p class="small">Professor of Psychology at The New School for Social Research and Eugene Lang College. NIMH R01 Principal Investigator. Author of over 50 publications spanning populations including low-income women, ethnic minority youth, domestic violence survivors, and children in conflict zones. Leads all evaluation design, outcome measurement, data infrastructure, and peer-reviewed publication for RISE.</p>
+        </div>
+      </article>
+      <article class="leader">
+        <img src="images/chad.jpg" alt="Chad Asarch portrait" class="leader__portrait">
+        <div class="leader__body">
+          <span class="caption">Co-Founder &amp; Board Chair, W.O.R.T.H.</span>
+          <h3 class="h4">Chad Asarch</h3>
+          <p class="small">Entrepreneur, philanthropist, and national affordable housing developer. Former Adjunct Law Professor at the University of Denver School of Law and the University of Colorado Law School. A dedicated community and political activist and policy advocate, Chad has spent his career advancing equity-driven solutions at the intersection of housing, law, and public policy.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+.leaders { display: grid; grid-template-columns: 1fr; gap: var(--s-7); max-width: 80%; margin-inline: auto; }
+#leadership .section-head { max-width: 80%; margin-inline: auto; }
+@media (min-width: 900px) { .leaders { grid-template-columns: repeat(3, 1fr); } }
+.leader { display: flex; flex-direction: column; gap: var(--s-5); }
+.leader__portrait { aspect-ratio: 4 / 5; width: 100%; display: block; border: 1px solid var(--rule); border-radius: var(--radius); object-fit: cover; }
+.leader__body { display: flex; flex-direction: column; gap: var(--s-3); }
+.leader__body h3 { margin: 0; }
+</style>
+
+
+<!-- ============================ SECTION 11 — PRESS ============================ -->
+<section class="section section--bone" id="press" data-chapter="Press" data-screen-label="11 Press" style="padding: 0px">
+  <div class="container">
+    <header class="section-head" style="margin: 0px 149px">
+      <h2 class="h2" data-reveal>The story of RISE is a story the world needs to hear.</h2>
+    </header>
+
+    <div class="grid grid-2">
+      <div class="prose body" data-reveal>
+        <p>RISE sits at the convergence of the trauma crisis, the recidivism epidemic, the psychedelic medicine renaissance, criminal justice reform, and the emerging science of nervous system regulation. It is a story about what happens when we stop asking <em>what is wrong with people</em> — and start asking <em>what happened to them.</em></p>
+        <p>The RISE team is available for keynote presentations, policy briefings, media interviews, and documentary collaboration.</p>
+      </div>
+      <aside class="press__contact">
+        <span class="caption">Media and Speaking inquiries</span>
+        <p class="body" style="margin-top: var(--s-3);">Jaspre Guest<br><a class="link-u" href="mailto:jaspre@noise784.com">jaspre@noise784.com</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+#press .section-head { max-width: 80%; margin-inline: auto; }
+#press > .container > .grid { max-width: 80%; margin-inline: auto; }
+.press__list { list-style: none; padding: 0; margin: var(--s-3) 0; display: flex; flex-direction: column; gap: 6px; }
+.press__list li { padding: 10px 0; border-top: 1px solid var(--rule); font-size: var(--t-small); }
+</style>
+
+<!-- ============================ SECTION 12 — FINAL CTA ============================ -->
+<section class="section section--flush final" data-screen-label="12 Final CTA" style="padding: 24px">
+  <!-- Horizon photo (subtle backdrop) -->
+  <image-slot id="img-landscape" shape="rect" placeholder="landscape-01 · dawn road / horizon — see Art Direction" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0.18; pointer-events: none;"></image-slot>
+  <div class="container final__inner" style="padding: 0px">
+    <h2 class="final__headline" data-reveal>What if public safety <span style="color:var(--moss)">began with healing?</span></h2>
+    <p class="lead prose" style="margin: 22px 0px 22px 22px">The people moving through our criminal justice system are not broken. They are people whose nervous systems adapted to environments that gave them no other choice. RISE is building the clinical infrastructure, the evidence base, and the institutional partnerships to make healing-centered justice the national standard of care.</p>
+
+    <div class="final__paths grid grid-4 mt-8">
+      <a href="#for-das" class="path">
+        <div class="caption">If you lead a city or DA's office</div>
+        <span class="path__cta">Partner With RISE&nbsp;<span class="arrow">↗</span></span>
+      </a>
+      <a href="#for-funders" class="path">
+        <div class="caption">If you are a funder or philanthropist</div>
+        <span class="path__cta">Invest in the Mission&nbsp;<span class="arrow">↗</span></span>
+      </a>
+      <a href="#leadership" class="path">
+        <div class="caption">If you are a clinician or researcher</div>
+        <span class="path__cta">Join Our Network&nbsp;<span class="arrow">↗</span></span>
+      </a>
+      <a href="#press" class="path">
+        <div class="caption">If you believe in this</div>
+        <span class="path__cta">Share RISE With Someone Who Needs to Hear It&nbsp;<span class="arrow">↗</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.final { padding-block: clamp(96px, 12vw, 180px); border-top: 1px solid var(--rule); position: relative; overflow: hidden; }
+.final__inner { max-width: 1100px; position: relative; }
+.final__headline { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.02; letter-spacing: -0.03em; font-weight: 500; margin: var(--s-5) 0 var(--s-7); text-wrap: balance; }
+.final__paths { gap: 0 !important; border-top: 1px solid var(--ink); }
+.path {
+  display: flex; flex-direction: column; gap: var(--s-5);
+  padding: var(--s-6) var(--s-4);
+  border-right: 1px solid var(--rule);
+  min-height: 200px;
+  transition: background 200ms var(--ease);
+}
+.path:last-child { border-right: 0; }
+.path:hover { background: var(--bone); }
+.path__cta { font-size: clamp(15px, 1.05vw, 18px); font-weight: 500; margin-top: auto; text-wrap: balance; }
+.path .arrow { display: inline-block; transition: transform 200ms var(--ease); margin-left: 4px; }
+.path:hover .arrow { transform: translate(3px, -3px); }
+@media (max-width: 800px) {
+  .final__paths { display: flex; flex-direction: column; border-top: 1px solid var(--ink); }
+  .path { border-right: 0; border-bottom: 1px solid var(--rule); min-height: 0; }
+}
+</style>
+
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="nav__brand" style="color:var(--paper); margin-bottom: var(--s-5)">
+        <span class="logo-wordmark" style="color:var(--paper)">Rise For Change</span>
+      </div>
+      <p class="small" style="color:rgba(247,243,234,0.7); max-width: 36ch;">Reimagining Incarceration through Systemic Empowerment. A trauma-informed model for diversion, behavioral transformation, and long-term recidivism reduction.</p>
+    </div>
+    <div>
+      <h6>The Program</h6>
+      <ul>
+        <li><a href="#approach">The Science &amp; Approach</a></li>
+        <li><a href="#model">The Model</a></li>
+        <li><a href="#outcomes">Impact &amp; Outcomes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Partners</h6>
+      <ul>
+        <li><a href="#for-das">For District Attorneys &amp; Cities</a></li>
+        <li><a href="#for-funders">For Funders</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Press &amp; Media</h6>
+      <ul>
+        <li><a href="#press">Press &amp; Media</a></li>
+        <li><a href="mailto:jaspre@noise784.com">jaspre@noise784.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__base">
+    <div>© 2026 RISE. All rights reserved.</div>
+    <div>Media: <a href="mailto:jaspre@noise784.com" style="color:inherit; text-decoration: underline;">jaspre@noise784.com</a></div>
+  </div>
+</footer>
+
+<script src="shared/site.js"></script>
+<script src="shared/interactions.js"></script>
+</body>
+</html>
