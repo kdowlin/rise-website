@@ -1,5 +1,14 @@
 // RISE — shared site behavior
 (function(){
+  // Keep --nav-h in sync with the actual nav height so sticky bars align at all breakpoints.
+  const navEl = document.querySelector('.nav');
+  const setNavH = () => {
+    if (navEl) document.documentElement.style.setProperty('--nav-h', Math.round(navEl.getBoundingClientRect().height) + 'px');
+  };
+  setNavH();
+  window.addEventListener('resize', setNavH, { passive: true });
+  window.addEventListener('load', setNavH);
+
   // Nav transparency over full-bleed hero: when the cover scrolls off-screen,
   // swap to solid nav.
   const cover = document.querySelector('.cover');
