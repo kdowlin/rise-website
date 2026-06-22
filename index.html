@@ -16,8 +16,6 @@
 <template id="__bundler_thumbnail">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#15171C"/><text x="50" y="58" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#EEEAE0">R</text></svg>
 </template>
-
-
 <!-- ============================ NAV ============================ -->
 <nav class="nav nav--on-image" id="site-nav">
   <div class="nav__inner">
@@ -42,33 +40,26 @@
       <a href="#leadership">Our Team</a>
       <a href="#press">Press</a></div>
   </nav>
-
 <!-- ============================ COVER ============================ -->
 <header class="cover" data-screen-label="00 Cover">
-
   <!-- Full-bleed photograph as backdrop -->
   <img src="images/hero.png" alt="Two people in their neighborhood, in conversation in afternoon light." class="cover__bg">
   <div class="cover__scrim" aria-hidden="true"></div>
-
   <!-- Overlay composition -->
   <div class="cover__overlay">
     <div class="cover__overlay-inner">
-
       <!-- Opening line -->
       <span class="cover__open" data-kinetic data-kinetic-step="48" data-kinetic-delay="800">A diversion model</span>
-
       <!-- Bold display headline -->
       <h1 class="cover__h" data-kinetic data-kinetic-step="80" data-kinetic-delay="1100">
         built to reduce
         <em class="cover__h-em">recidivism</em>
         at its <em class="cover__h-em">root.</em>
       </h1>
-
       <!-- Subheadline (approved copy verbatim) -->
       <p class="cover__sub" data-kinetic data-kinetic-step="18" data-kinetic-delay="2400">
         77% of people released from prison are rearrested within five years. We know why. And we know how to change it. Most people cycling through our justice system are traumatized people who were never given the tools to respond differently. When trauma goes untreated, it narrows the world to threat and survival — erasing any sense of future. And a life with no imaginable future is one of the most powerful drivers of crime we know. <strong>RISE was built to change that.</strong>
       </p>
-
       <!-- CTAs -->
       <nav class="cover__cta" aria-label="Primary calls to action">
         <a class="cover__cta-link" href="#for-das" data-magnetic="0.18">
@@ -87,17 +78,13 @@
           <span class="cover__cta-arrow" aria-hidden="true">→</span>
         </a>
       </nav>
-
       <!-- Credibility line at the foot -->
       <aside class="cover__credit">
         Developed by world-leading trauma specialists. Partnered with leading academic medical institutions. Designed for district attorneys, cities, and communities ready to lead.
       </aside>
-
     </div>
   </div>
-
 </header>
-
 <style>
 /* =========================================================
    COVER — full-bleed photograph with overlaid bold headline
@@ -129,7 +116,6 @@
 @media (prefers-reduced-motion: reduce) {
   .cover__bg { opacity: 1; transform: none; animation: none; }
 }
-
 .cover__scrim {
   position: absolute;
   inset: 0;
@@ -139,7 +125,6 @@
     linear-gradient(180deg, rgba(14,16,20,0.45) 0%, rgba(14,16,20,0.10) 35%, rgba(14,16,20,0.30) 65%, rgba(14,16,20,0.92) 100%),
     linear-gradient(90deg, rgba(14,16,20,0.55) 0%, rgba(14,16,20,0.20) 50%, rgba(14,16,20,0) 80%);
 }
-
 .cover__overlay {
   position: relative;
   z-index: 2;
@@ -154,7 +139,6 @@
   width: 100%;
   margin-left: max(0px, calc((100% - var(--max)) / 2));
 }
-
 .cover__open {
   display: block;
   font-family: var(--font-sans);
@@ -165,7 +149,6 @@
   color: var(--stone-soft);
   margin-bottom: var(--s-3);
 }
-
 .cover__h {
   font-family: var(--font-display);
   font-weight: 400;
@@ -186,7 +169,6 @@
   color: var(--bone);
   letter-spacing: -0.025em;
 }
-
 .cover__sub {
   font-family: var(--font-sans);
   font-size: clamp(15px, 1.15vw, 18px);
@@ -199,7 +181,6 @@
   text-shadow: 0 1px 20px rgba(0,0,0,0.4);
 }
 .cover__sub strong { color: var(--bone); font-weight: 500; }
-
 .cover__cta {
   display: flex;
   flex-direction: column;
@@ -242,7 +223,6 @@
   transition: transform 220ms var(--ease), color 200ms var(--ease);
 }
 .cover__cta-link:hover .cover__cta-arrow { transform: translateX(8px); color: var(--bone); }
-
 .cover__credit {
   font-family: var(--font-sans);
   font-size: 12.5px;
@@ -251,31 +231,25 @@
   max-width: 64ch;
   letter-spacing: -0.005em;
 }
-
 @media (max-width: 720px) {
   .cover__h { font-size: clamp(44px, 12vw, 72px); }
 }
 </style>
-
 <style>
 </style>
-
-
 <!-- ============================ SECTION 02 — THE PROBLEM ============================ -->
 <section class="section section--bone section--breathe" id="problem" data-chapter="Problem" data-screen-label="02 Problem" style="padding: 24px 0px">
   <div class="section__bar"><div class="section__bar-inner">The Crisis</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 24px 0px">The recidivism crisis is not a mystery.<br><span style="color:var(--ink-mute)">It is an untreated trauma epidemic.</span></h2>
     </header>
-
     <div class="problem__layout" style="gap: 12px">
       <div class="problem__lede prose" data-reveal>
         <p>The United States incarcerates more people than any nation on earth — spending over <strong>$80 billion</strong> each year doing so. Within three years of release, 67–77% of individuals are rearrested. Over a decade, that number climbs above 80%.</p>
         <p>We have built the most expensive recidivism machine in human history — and called it justice. Something is broken, and the question we rarely ask is: <strong>why do people keep returning to jail?</strong></p>
       </div>
-
       <aside class="problem__aside">
         <p>Research consistently shows that up to <strong>95%</strong> of incarcerated individuals have experienced significant trauma. The average Adverse Childhood Experience (ACE) score among incarcerated individuals is <strong>7</strong> — compared to a national average of less than 2. An ACE score of 4 or higher is associated with dramatically elevated risks of addiction, mental illness, and violence. Thirty to sixty percent of incarcerated men meet full diagnostic criteria for Post-Traumatic Stress Disorder — compared to 3–6% of the general population.</p>
         <p class="problem__aside-conclude" style="padding: 22px 0px 0px">Without treating the trauma, we’re not solving the underlying problem. We are warehousing suffering and releasing it back into communities, untreated. Something fundamentally different is needed.</p>
@@ -313,10 +287,8 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ============================ SECTION SEPARATOR — QUOTE BAND ============================ -->
 <section class="quote-band quote-band--sweater" aria-label="Pullquote" style="padding: 36px 0px">
   <figure class="quote-band__inner" style="gap: 0px">
@@ -324,7 +296,6 @@
     <blockquote class="quote-band__quote">We have spent decades trying to correct behavior without healing the underlying trauma that drives it. RISE was built to close that gap.</blockquote>
   </figure>
 </section>
-
 <style>
 .quote-band {
   background: var(--ledger-deep);
@@ -366,14 +337,12 @@
 .quote-band--pivot {
   padding-block: clamp(64px, 10vw, 160px);
 }
-
 /* Slate treatment — matches the research band's t-shirt blue */
 .quote-band--slate {
   background:
     radial-gradient(110% 80% at 20% 15%, rgba(108, 124, 138, 0.40) 0%, transparent 65%),
     linear-gradient(135deg, #3E4A56 0%, #232A33 100%);
 }
-
 /* Sweater treatment — burnt terracotta gradient matched to the hero photograph */
 .quote-band--sweater {
   background:
@@ -388,17 +357,14 @@
   color: var(--paper);
 }
 </style>
-
 <style>
 .plate { margin: 0; }
 .plate image-slot { border: 1px solid var(--rule); border-radius: var(--radius); display: block; }
 .plate__cap { display: flex; gap: var(--s-4); margin-top: var(--s-4); flex-wrap: wrap; align-items: baseline; color: var(--ink-mute); }
 </style>
-
 <style>
 /* Section breathing — applied where we want hero-parity vertical rhythm */
 .section--breathe { padding-block: clamp(64px, 7vw, 128px); }
-
 .problem__layout {
   display: flex;
   flex-direction: column;
@@ -408,7 +374,6 @@
   margin-inline: auto;
 }
 #problem .section-head { max-width: 100%; margin-inline: 0; }
-
 .problem__layout p {
   font-size: clamp(1.125rem, 1.4vw, 1.375rem);
   line-height: 1.55;
@@ -419,7 +384,6 @@
 }
 .problem__layout p:last-child { margin-bottom: 0; }
 .problem__layout strong { font-weight: 500; color: var(--ink); }
-
 .problem__aside {
   padding-top: var(--s-5);
   border-top: 1px solid var(--rule);
@@ -430,7 +394,6 @@
   border-top: 1px solid var(--rule);
   margin-top: var(--s-4) !important;
 }
-
 .problem__stats {
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--rule);
@@ -486,30 +449,22 @@
   max-width: 32ch;
 }
 </style>
-
-
 <!-- ============================ SECTION 03 — SCIENCE & APPROACH ============================ -->
 <section class="section section--breathe" id="approach" data-chapter="Approach" data-screen-label="03 Science" style="padding: 24px 0px 0px">
   <div class="section__bar"><div class="section__bar-inner">The Science</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal>Trauma lives in the body. <span style="color:var(--moss)">So does healing.</span></h2>
     </header>
-
     <div class="approach__prose">
       <p>Neuroscience has revealed something that changes everything: trauma is not primarily a cognitive experience — it is a physiological one. When a person experiences overwhelming stress, the nervous system adapts to survive. It becomes hypervigilant or numb, reactive or shut down. The brain's threat-detection systems grow hypersensitive. Impulse regulation deteriorates. The body learns to operate in survival mode — and survival mode does not pause to make thoughtful decisions.</p>
-
       <p>As Dr. Bessel van der Kolk, has documented in his landmark work, <em>The Body Keeps the Score</em>. Rational insight alone cannot undo what the nervous system has encoded. <strong>Healing must engage the body and the mind.</strong> This is the scientific foundation of RISE.</p>
-
       <p>Integrative Somatic Trauma Therapy is a clinically grounded, body-based framework that works directly with the nervous system. Participants learn to recognize physical signs of activation, regulate heightened or shut-down states, and develop awareness of impulses before they become actions. This approach helps reclaim agency and control, reducing dysregulated, impulsive, and fear-driven behavior.</p>
-
       <p>Ketamine-Assisted Therapy (KAT) functions as a therapeutic catalyst within this framework. Its unique pharmacology opens a window of neuroplasticity — a rare state in which the brain becomes receptive to what it could not process before. Participants are able to witness their own traumatic experiences from a distance, without the grip of fear, and with a quality of self-compassion that trauma typically makes impossible. In that space, the fear response that has silently driven so much behavior can finally be released. New neural pathways form and take hold through integration, making the shift permanent — addressing the neurological roots of addiction alongside trauma.</p>
     </div>
-
   </div>
 </section>
-
 <!-- ============================ RESEARCH BAND — SECTION SEPARATOR ============================ -->
 <section class="research-band" aria-label="Evidence base" style="padding: 36px 0px">
   <div class="research-band__inner">
@@ -524,7 +479,6 @@
         </header>
         <p class="research-band__finding">Psychedelic-assisted therapeutic approaches are associated with <strong>27% reduced property crime</strong>, <strong>18% reduced violent crime arrest</strong>, and <strong>12% reduced assault</strong>.</p>
       </article>
-
       <article class="research-band__entry">
         <header class="research-band__byline">
           <h3 class="research-band__author">Jones &amp; Nock</h3>
@@ -535,7 +489,6 @@
         </header>
         <p class="research-band__finding">Reductions in criminal arrest outcomes ranging from <strong>27% to 70%</strong> across multiple crime categories. Psychedelics were the only substances consistently associated with reduced — not increased — criminal behavior.</p>
       </article>
-
       <article class="research-band__entry">
         <header class="research-band__byline">
           <h3 class="research-band__author">Neitzke-Spruill</h3>
@@ -549,7 +502,6 @@
     </div>
   </div>
 </section>
-
 <style>
 .research-band {
   background:
@@ -645,7 +597,6 @@
   color: #E5C16A;
 }
 </style>
-
 <style>
 .approach__prose {
   max-width: 90%;
@@ -667,7 +618,6 @@
 .approach__prose p:last-child { margin-bottom: 0; }
 .approach__prose strong { font-weight: 500; color: var(--ink); }
 .approach__prose em { font-style: italic; }
-
 /* In-prose pull-quotes — lift a sentence to a typographic peak */
 .approach__pull {
   font-family: var(--font-sans);
@@ -683,7 +633,6 @@
   text-wrap: balance;
   max-width: 90%;
 }
-
 /* Pivot — the act break between diagnosis and treatment */
 .approach__pivot {
   display: flex;
@@ -714,7 +663,6 @@
   text-wrap: balance;
   max-width: 90%;
 }
-
 .research {
   border-top: 1px solid var(--rule);
   padding-top: clamp(32px, 4vw, 56px);
@@ -732,7 +680,6 @@
   font-weight: 500;
 }
 .research__rule { flex: 1; height: 1px; background: var(--rule); border: 0; margin: 0; }
-
 .research__list {
   display: flex;
   flex-direction: column;
@@ -801,21 +748,17 @@
   color: var(--ledger);
 }
 </style>
-
-
 <!-- ============================ SECTION 04 — THE MODEL ============================ -->
 <section class="section" id="model" data-chapter="Model" data-screen-label="04 Model" style="padding: 24px 0px 0px">
   <div class="section__bar"><div class="section__bar-inner">How It Works</div></div>
   <div class="container" style="padding: 0px 56px 24px">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 22px 0px">A new model. Grounded in science. <span style="color:var(--ink-mute)">Built for people.</span></h2>
     </header>
-
     <div class="section-head__lede prose lead" style="max-width: 90%; margin-inline: auto;">
       <p>RISE operates within a formal diversion framework in close partnership with District Attorney's offices — legally integrated, clinically rigorous, and deeply human. Designed to produce measurable outcomes while treating every participant as a full human being.</p>
     </div>
-
     <!-- 5-step process -->
     <div class="model__track">
       <div class="model__line" aria-hidden="true"></div>
@@ -852,7 +795,6 @@
     </div>
   </div>
 </section>
-
 <style>
 .model__track {
   position: relative;
@@ -902,7 +844,6 @@
 }
 .model__step h3 { margin: 0; }
 .model__step--continues { flex: 0 0 auto; padding-top: 0; min-height: 56px; display: flex; align-items: center; }
-
 /* Tablet — model steps wrap to a 3-then-2 grid */
 @media (max-width: 979px) {
   .model__steps { grid-template-columns: repeat(3, 1fr); }
@@ -930,38 +871,28 @@
   color: var(--ink-mute);
 }
 </style>
-
-
 <!-- ============================ SECTION 05 — SING YOUR SONG ============================ -->
 <!-- Image break: full-bleed photograph above the parable -->
 <figure class="song-break">
   <img src="images/song-tribe.png" alt="A circle of community gathered around one person at dusk." class="song-break__img">
 </figure>
-
 <section class="section section--breathe song" id="song" data-chapter="Song" data-screen-label="05 Sing Your Song" style="padding: 24px 0px">
   <div class="section__bar"><div class="section__bar-inner">Our Philosophy</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 22px 0px">A person who has lost their way, <strong style="color:var(--ledger); font-weight:500">can find their way home.</strong></h2>
     </header>
-
     <div class="song__prose">
       <p>When a woman in a certain African tribe knows she is pregnant, she goes out into the wilderness with a few friends. Together they pray and meditate until they hear the baby’s unique song. They return to the tribe and teach it to everyone.</p>
-
       <p>When the child is born, the community gathers and sings the child’s song. When the child enters school. When they pass into adulthood. At marriage. And at the end of life.</p>
-
       <p>There is one other occasion upon which the villagers sing to the child.</p>
-
       <p>If, at any time during the person’s life, they commit a crime or socially aberrant act, they are called to the center of the village. The people form a circle around them — and sing their song.</p>
-
       <p>Because they understand something the modern criminal justice system has forgotten: <strong>a person who has lost their way has not lost their song.</strong></p>
-
       <p class="song__close">RISE was built on this understanding. Our work is not punishment. <strong style="color:var(--ledger); font-weight:500">It is remembrance.</strong></p>
     </div>
   </div>
 </section>
-
 <!-- ============================ SECTION SEPARATOR — BLESSING QUOTE BAND ============================ -->
 <section class="quote-band quote-band--slate" aria-label="Pullquote" style="padding: 36px 0px">
   <figure class="quote-band__inner" style="gap: 0px">
@@ -969,7 +900,6 @@
     <blockquote class="quote-band__quote">Those who love you are not fooled by mistakes you have made or dark images you hold about yourself. They remember your beauty when you feel ugly; your wholeness when you are broken; your innocence when you feel guilty; and your purpose when you are confused.</blockquote>
   </figure>
 </section>
-
 <style>
 .song-break {
   margin: 0;
@@ -985,7 +915,6 @@
   object-position: center bottom;
   max-height: 58vh;
 }
-
 .song {
   background: var(--paper);
   padding-block: clamp(40px, 5vw, 80px);
@@ -1006,7 +935,6 @@
 }
 .song__prose p:last-child { margin-bottom: 0; }
 .song__prose strong { font-weight: 500; color: var(--ink); }
-
 .song__quote {
   font-family: var(--font-sans);
   font-weight: 300;
@@ -1022,24 +950,20 @@
   text-wrap: balance;
   max-width: 72ch;
 }
-
 .song__close {
   font-size: clamp(1.125rem, 1.4vw, 1.375rem) !important;
   font-weight: 500;
   margin-top: clamp(24px, 3vw, 40px) !important;
 }
 </style>
-
-
 <!-- ============================ SECTION 06 — WHY THIS IS DIFFERENT ============================ -->
 <section class="section" id="different" data-chapter="Different" data-screen-label="06 Different" style="padding: 24px 0px 24px">
   <div class="section__bar"><div class="section__bar-inner">Why RISE</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal>The future of criminal justice reform is not punishment. <span style="color:var(--moss)">It's healing, accountability, and restoration.</span></h2>
     </header>
-
     <!-- Comparison table: Traditional vs. RISE across six dimensions -->
     <div class="compare-table" role="table" aria-label="Traditional approach vs. RISE">
       <div class="compare-table__head" role="row">
@@ -1073,10 +997,8 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ============================ SECTION SEPARATOR — RISE QUOTE BAND ============================ -->
 <section class="quote-band quote-band--sweater" aria-label="Pullquote" style="padding: 36px 0px">
   <figure class="quote-band__inner" style="gap: 0px">
@@ -1084,7 +1006,6 @@
     <blockquote class="quote-band__quote">RISE does not replace accountability. It makes accountability possible — by ensuring individuals have the internal capacity to regulate behavior, engage meaningfully in supervision, and make genuinely different choices.</blockquote>
   </figure>
 </section>
-
 <style>
 .redline {
   list-style: none;
@@ -1148,7 +1069,6 @@
   font-weight: 600;
   background: rgba(38, 72, 123, 0.04);
 }
-
 @media (max-width: 700px) {
   .compare-table__head { display: none; }
   .compare-table__row {
@@ -1199,19 +1119,15 @@
     pairs.forEach(p => io.observe(p));
   })();
 </script>
-
-
 <!-- ============================ SECTION 07 — IMPACT & OUTCOMES ============================ -->
 <section class="section section--bone section--breathe" id="outcomes" data-chapter="Outcomes" data-screen-label="07 Impact" style="padding: 24px 0px 24px">
   <div class="section__bar"><div class="section__bar-inner">The Impact</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 24px 0px">What changes when healing happens.</h2>
     </header>
-
     <div class="outcomes__inner" style="gap: 2px">
-
       <!-- Qualitative block -->
       <div class="outcomes__qual">
         <div class="outcomes__qual-grid" style="padding: 0px">
@@ -1244,7 +1160,6 @@
           </article>
         </div>
       </div>
-
       <!-- Quantitative block -->
       <div class="outcomes__quant">
         <div class="problem__stats outcomes__quant-stats">
@@ -1267,14 +1182,11 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <style>
 #outcomes .section-head { max-width: 100%; margin-inline: 0; }
-
 .outcomes__inner {
   max-width: 90%;
   margin-inline: auto;
@@ -1282,7 +1194,6 @@
   flex-direction: column;
   gap: clamp(48px, 7vw, 96px);
 }
-
 /* Qualitative block */
 .outcomes__qual-grid {
   display: grid;
@@ -1336,7 +1247,6 @@
   border-radius: 50%;
   background: var(--ledger);
 }
-
 /* Quantitative block — break out of the 80% inner wrap so stats hit container 80% directly */
 .outcomes__quant-stats {
   max-width: 100%;
@@ -1345,28 +1255,23 @@
 .stat-cell--total .stat-cell__num { color: var(--ledger); }
 .stat-cell__label strong { color: var(--ink); font-weight: 500; }
 </style>
-
-
 <!-- Section divider — chapter break between Outcomes and For DAs -->
 <div class="section-divider" aria-label="For District Attorneys and Cities" style="padding: 24px 0px">
   <span class="section-divider__rule"></span>
   <span class="section-divider__mark">For District Attorneys &amp; Cities</span>
   <span class="section-divider__rule"></span>
 </div>
-
 <!-- ============================ SECTION 08 — FOR DAs ============================ -->
 <section class="section section--breathe" id="for-das" data-chapter="For DAs" data-screen-label="08 For DAs" style="padding: 24px 0px 128px">
   <div class="section__bar"><div class="section__bar-inner">For Partners</div></div>
   <div class="container" style="padding: 0px 56px 24px">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 24px 0px">Public safety is not just about punishment. <span style="color:var(--ledger)">It's about crime prevention.</span></h2>
     </header>
-
     <div class="das__lede">
       <p>RISE works directly with DA's offices and city governments to implement a clinically rigorous diversion program that is legally sound, fiscally responsible, and demonstrably effective.</p>
     </div>
-
     <ol class="das__pillars">
       <li class="das__pillar" style="padding: 12px 0px 20px">
         <div class="das__body">
@@ -1393,7 +1298,6 @@
         </div>
       </li>
     </ol>
-
     <div class="das__cta">
       <p class="das__cta-line">Ready to bring RISE to your jurisdiction?</p>
       <a class="das__cta-link" href="mailto:scott@drscottlyons.com?subject=Schedule%20a%20Conversation%20with%20Our%20Team" data-magnetic="0.18">
@@ -1403,7 +1307,6 @@
     </div>
   </div>
 </section>
-
 <style>
 /* Section divider — editorial chapter break ornament */
 .section-divider {
@@ -1431,9 +1334,7 @@
   line-height: 1;
   white-space: nowrap;
 }
-
 #for-das .section-head { max-width: 100%; margin-inline: 0; margin-bottom: clamp(32px, 4vw, 56px); }
-
 .das__lede {
   max-width: 90%;
   margin-inline: auto;
@@ -1448,7 +1349,6 @@
   margin: 0;
   text-wrap: pretty;
 }
-
 .das__pillars {
   list-style: none;
   padding: 0;
@@ -1504,7 +1404,6 @@
   max-width: 64ch;
 }
 .das__body p strong { color: var(--ink); font-weight: 500; }
-
 .das__cta {
   max-width: 90%;
   margin: clamp(48px, 6vw, 96px) auto 0;
@@ -1550,18 +1449,15 @@
 }
 .das__cta-link:hover .das__cta-arrow { transform: translateX(4px); }
 </style>
-
-
 <!-- ============================ SECTION 09 — FOR FUNDERS ============================ -->
 <section class="section section--breathe section--funders" id="for-funders" data-chapter="For Funders" data-screen-label="09 For Funders" style="padding: 24px 0px 24px">
   <div class="section__bar"><div class="section__bar-inner">For Funders</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 24px 0px">This is what upstream investment looks like.</h2>
       <p class="funders__lede" style="margin: 0px">The cost of inaction is not zero. Every dollar not invested in trauma treatment today is a dollar — plus many more — spent on reincarceration, prosecution, supervision, and community harm tomorrow.</p>
     </header>
-
     <!-- ACE → cost cascade -->
     <div class="funders__cascade">
       <div class="funders__cascade-col">
@@ -1582,9 +1478,7 @@
         <div class="funders__cascade-note">$88K every year, compounded across a population</div>
       </div>
     </div>
-
     <p class="funders__bridge" style="margin: 24px 149px">The incarcerated population sits at the <strong>extreme end of this curve</strong> — with an average ACE score of 7, nearly four times the national average. They represent the highest-burden, most underserved segment of this crisis.</p>
-
     <div class="funders__pillars">
       <article class="funders__pillar" style="padding: 12px 0px">
         <h3 class="funders__pillar-title">Upstream Impact</h3>
@@ -1603,9 +1497,7 @@
         <p>Anchored by world-leading trauma clinicians, an active NIMH R01 grant, and formal academic medical partnerships.</p>
       </article>
     </div>
-
     <figure class="funders__pullquote" hidden></figure>
-
     <div class="funders__cta">
       <p class="funders__cta-line" style="padding: 12px">Interested in funding RISE?</p>
       <a class="funders__cta-link" href="mailto:scott@drscottlyons.com?subject=Connect%20With%20Our%20Development%20Team" data-magnetic="0.18">
@@ -1613,9 +1505,13 @@
         <span class="funders__cta-arrow" aria-hidden="true">→</span>
       </a>
     </div>
+    <!-- WORTH partnership -->
+    <div class="funders__worth">
+      <span class="funders__worth-tag">Our Partner</span>
+      <p>RISE is proud of its partnership with Wayward Offender Rehabilitation thru Trauma Healing (WORTH), a Colorado nonprofit established for charitable, scientific and education purposes and specifically to support the development and operation of diversion programs within the criminal justice system that focus on trauma therapy and healing modalities as an alternative to incarceration. Consistent with that mission, WORTH has committed to support RISE’s groundbreaking work in this area solely to benefit the class of criminal defendants who will be the program participants and the justice system overall.</p>
+    </div>
   </div>
 </section>
-
 <!-- ============================ SECTION SEPARATOR — FUNDERS QUOTE BAND ============================ -->
 <section class="quote-band quote-band--slate" aria-label="Pullquote" style="padding: 24px 0px">
   <figure class="quote-band__inner" style="gap: 0px">
@@ -1623,7 +1519,6 @@
     <blockquote class="quote-band__quote">Investing in their healing is not charity. It is the highest-return intervention available in the entire public health and public safety landscape.</blockquote>
   </figure>
 </section>
-
 <style>
 #for-das { background: var(--paper); }
 .section--funders {
@@ -1636,7 +1531,6 @@
   margin-bottom: clamp(40px, 5vw, 72px);
 }
 #for-funders .section-head .h2 { color: var(--ink); }
-
 .funders__lede {
   font-family: var(--font-sans);
   font-size: clamp(1.125rem, 1.4vw, 1.375rem);
@@ -1646,7 +1540,6 @@
   margin: var(--s-5) 0 0;
   text-wrap: pretty;
 }
-
 .funders__cascade {
   display: flex;
   flex-direction: column;
@@ -1710,7 +1603,6 @@
   font-weight: 400;
 }
 @media (max-width: 899px) { .funders__cascade-arrow { transform: rotate(90deg); padding: 4px 0; } }
-
 .funders__bridge {
   font-family: var(--font-sans);
   font-size: clamp(1.125rem, 1.4vw, 1.375rem);
@@ -1722,7 +1614,6 @@
   text-wrap: pretty;
 }
 .funders__bridge strong { color: var(--ink); font-weight: 500; }
-
 .funders__pillars {
   display: grid;
   grid-template-columns: 1fr;
@@ -1762,7 +1653,6 @@
   max-width: 50ch;
 }
 .funders__pillar p strong { color: var(--ledger); font-weight: 500; }
-
 .funders__pullquote {
   max-width: 90%;
   margin: clamp(56px, 7vw, 112px) auto;
@@ -1780,7 +1670,6 @@
   text-wrap: balance;
   max-width: 28ch;
 }
-
 .funders__cta {
   max-width: 90%;
   margin: 0 auto;
@@ -1825,18 +1714,44 @@
   transition: transform 220ms var(--ease);
 }
 .funders__cta-link:hover .funders__cta-arrow { transform: translateX(4px); }
+/* WORTH partnership block */
+.funders__worth {
+  max-width: 90%;
+  margin: clamp(48px, 6vw, 88px) auto 0;
+  padding-top: clamp(32px, 4vw, 56px);
+  border-top: 1px solid rgba(31, 58, 95, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.funders__worth-tag {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 500;
+}
+.funders__worth p {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.2vw, 1.1875rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  letter-spacing: -0.005em;
+  margin: 0;
+  max-width: 78ch;
+  text-wrap: pretty;
+}
+.funders__worth strong { color: var(--ink); font-weight: 500; }
 </style>
-
-
 <!-- ============================ SECTION 10 — LEADERSHIP ============================ -->
 <section class="section" id="leadership" data-chapter="Leadership" data-screen-label="10 Leadership" style="padding: 24px 0px">
   <div class="section__bar"><div class="section__bar-inner">Our Team</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 0px">The people building this.</h2>
     </header>
-
     <div class="leaders">
       <article class="leader">
         <img src="images/scott.jpeg" alt="Dr. Scott Lyons portrait" class="leader__portrait">
@@ -1865,7 +1780,6 @@
     </div>
   </div>
 </section>
-
 <style>
 .leaders { display: grid; grid-template-columns: 1fr; gap: var(--s-7); max-width: 90%; margin-inline: auto; }
 #leadership .section-head { max-width: 100%; margin-inline: 0; }
@@ -1875,17 +1789,14 @@
 .leader__body { display: flex; flex-direction: column; gap: var(--s-3); }
 .leader__body h3 { margin: 0; }
 </style>
-
-
 <!-- ============================ SECTION 11 — PRESS ============================ -->
 <section class="section section--bone" id="press" data-chapter="Press" data-screen-label="11 Press" style="padding: 24px 0px 0px">
   <div class="section__bar"><div class="section__bar-inner">Press</div></div>
   <div class="container">
     <header class="section-head">
-      
+
       <h2 class="h2" data-reveal style="margin: 29px 0px 0px">The story of RISE is a story the world needs to hear.</h2>
     </header>
-
     <div class="grid grid-2">
       <div class="prose body" data-reveal>
         <p>RISE sits at the convergence of the trauma crisis, the recidivism epidemic, the psychedelic medicine renaissance, criminal justice reform, and the emerging science of nervous system regulation. It is a story about what happens when we stop asking <em>what is wrong with people</em> — and start asking <em>what happened to them.</em></p>
@@ -1898,21 +1809,18 @@
     </div>
   </div>
 </section>
-
 <style>
 #press .section-head { max-width: 100%; margin-inline: 0; }
 #press > .container > .grid { max-width: 90%; margin-inline: auto; }
 .press__list { list-style: none; padding: 0; margin: var(--s-3) 0; display: flex; flex-direction: column; gap: 6px; }
 .press__list li { padding: 10px 0; border-top: 1px solid var(--rule); font-size: var(--t-small); }
 </style>
-
 <!-- ============================ SECTION 12 — FINAL CTA ============================ -->
 <section class="section section--flush final" data-screen-label="12 Final CTA" style="padding: 24px 0px">
   <div class="section__bar"><div class="section__bar-inner">Get Involved</div></div>
   <div class="container final__inner" style="padding: 0px">
     <h2 class="final__headline" data-reveal>What if public safety <span style="color:var(--moss)">began with healing?</span></h2>
     <p class="lead prose" style="margin: 22px 0px 22px 22px">The people moving through our criminal justice system are not broken. They are people whose nervous systems adapted to environments that gave them no other choice. RISE is building the clinical infrastructure, the evidence base, and the institutional partnerships to make healing-centered justice the national standard of care.</p>
-
     <div class="final__paths grid grid-4 mt-8">
       <a href="mailto:scott@drscottlyons.com?subject=Partner%20With%20RISE" class="path">
         <div class="caption">If you lead a city or DA's office</div>
@@ -1933,7 +1841,6 @@
     </div>
   </div>
 </section>
-
 <style>
 .final { padding-block: clamp(96px, 12vw, 180px); border-top: 1px solid var(--rule); position: relative; overflow: hidden; }
 .final__inner { max-width: var(--max); position: relative; padding-inline: var(--gutter) !important; }
@@ -1956,8 +1863,6 @@
   .path { border-right: 0; border-bottom: 1px solid var(--rule); min-height: 0; }
 }
 </style>
-
-
 <!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="footer__inner">
@@ -1996,7 +1901,6 @@
     <div>Media: <a href="mailto:jaspre@noise784.com" style="color:inherit; text-decoration: underline;">jaspre@noise784.com</a></div>
   </div>
 </footer>
-
 <script src="shared/site.js"></script>
 <script src="shared/interactions.js"></script>
 </body>
